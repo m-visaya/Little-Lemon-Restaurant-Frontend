@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../assets/images/Logo.svg";
-import hamburger from "../assets/images/🦆 icon _hamburger menu.svg";
+import hamburger from "../assets/images/icon _hamburger menu.svg";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
   return (
@@ -8,7 +9,7 @@ export default function Nav() {
       <img src={Logo} alt="LittleLemon Logo" />
       <ul>
         <li>
-          <a href="">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
           <a href="">About</a>
@@ -17,7 +18,7 @@ export default function Nav() {
           <a href="">Menu</a>
         </li>
         <li>
-          <a href="">Reservations</a>
+          <Link to="/booking">Reservation</Link>
         </li>
         <li>
           <a href="">Order Online</a>

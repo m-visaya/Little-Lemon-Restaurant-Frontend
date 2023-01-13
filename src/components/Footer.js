@@ -1,5 +1,6 @@
 import React from "react";
 import Logo_footer from "../assets/images/Logo_footer.png";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -9,7 +10,7 @@ export default function Footer() {
         <header>Navigation</header>
         <ul>
           <li>
-            <a href="">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <a href="">About</a>
@@ -18,7 +19,7 @@ export default function Footer() {
             <a href="">Menu</a>
           </li>
           <li>
-            <a href="">Reservations</a>
+            <Link to="/booking">Reservation</Link>
           </li>
           <li>
             <a href="">Order Online</a>
