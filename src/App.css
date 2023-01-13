@@ -32,6 +32,7 @@
   padding-block: 5rem;
   justify-content: center;
   gap: 10rem;
+  margin-top: 5rem;
 }
 
 
@@ -68,7 +69,6 @@
 }
 
 .Header section {
-  width: 100%;
   max-width: 70rem;
   margin-inline: auto;
   display: flex;
@@ -111,6 +111,7 @@
 
 .button-yellow {
   background-color: #f4ce14;
+  cursor: pointer;
   color: black !important;
   border: none;
   padding-block: .7rem;
@@ -122,8 +123,8 @@
   height: fit-content;
 }
 
-.Main {
-  margin-block: 5rem;
+.button-yellow:hover {
+  background-color: #ffd500;
 }
 
 .Specials {
@@ -198,6 +199,169 @@
   object-fit: contain;
 }
 
+.Booking {
+  max-width: 70rem;
+  margin-inline: auto;
+}
+
+.Form-Container {
+  width: fit-content;
+  margin-inline: auto;
+  margin-block: 6rem;
+}
+
+.Booking-Form label {
+  padding-top: 1.4rem !important;
+}
+
+.Booking-Form input, select {
+  border: #c2d8d1 solid 1px;
+  border-radius: .25rem;
+  padding: .5rem;
+  min-width: 20rem;
+}
+
+.form-error-msg {
+  color: red;
+  font-size: .9rem;
+  margin-top: 1rem;
+  line-height: 0;
+  margin-bottom: 0;
+}
+
+.button-form {
+  margin-top: 1.5rem !important;
+}
+
+.button-form-disabled {
+  background-color: rgb(165, 159, 159);
+}
+
+.button-form-disabled:hover {
+  background-color: rgb(165, 159, 159);
+}
+
+.Booking-Confirmed {
+  height: 80vh;
+  max-width: 70rem;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Booking-Confirmed img {
+  width: 5rem;
+  margin-block: 2rem;
+}
+
+.Booking-Confirmed h1 {
+  color: #495e57;
+  font-size:2rem;
+  line-height: 0;
+}
+
+.Testimonials{
+  background-color: #c2d8d1;
+  margin-block: 4rem;
+}
+
+.Testimonials>*:first-child{
+  max-width: 70rem !important;
+  margin-inline: auto;
+  padding-block: 2rem;
+}
+
+.Testimonials h1 {
+  font-family: 'Markazi Text', serif;
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.Testimonials-Card-Container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(240px, 1fr));
+  grid-row: 1;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.Testimonials-Card {
+  background-color: #edefee;
+  padding: 2rem;
+}
+
+.Testimonials-Card > div {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.Testimonials-Card > div > img {
+  width: 40%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.About {
+  max-width: 70rem;
+  margin-inline: auto;
+  display: flex;
+  padding-block: 4rem;
+  gap:4rem;
+}
+
+.About h1{
+  font-family: 'Markazi Text', serif;
+  color:#f4ce14;
+  font-size: 4rem;
+  line-height: .2;
+  margin: 0;
+  font-weight: 400;
+}
+
+.About p{
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.About h3{
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 0;
+  padding-bottom: 2rem !important;
+}
+
+.About>div {
+  width: 100%;
+
+}
+
+.Img-Stack {
+  position: relative;
+}
+
+.Img-Stack img {
+  width: 17rem;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.Img-Stack>img:first-child {
+  z-index: 2;
+  position: absolute;
+  left: 10rem;
+  bottom: 4rem;
+}
+
+.Img-Stack>img:last-child {
+  position: absolute;
+  top: 4rem;
+  bottom: 5rem;
+}
 
 @media only screen and (max-width: 600px) {
   .Navbar ul {
@@ -209,10 +373,6 @@
   .Navbar {
     padding-inline: 2rem;
     padding-block: 1rem;
-  }
-
-  .Main {
-    margin: 2rem;
   }
 
   .Header img {
@@ -242,9 +402,11 @@
   .Card-Container {
     display: flex;
     flex-direction: column;
+    padding-inline: 1rem;
   }
 
   .Footer {
+    margin-top: 2rem;
     display: grid;
     gap: 4rem;
     grid-template-columns: 1fr 1fr;
@@ -253,5 +415,46 @@
 
   .Footer > * {
     margin-inline: auto;
+  }
+
+  .Testimonials-Card-Container {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 1rem;
+  }
+
+  .About {
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 2rem;
+    gap: 10rem;
+  }
+
+  .Img-Stack img {
+    width: 12rem;
+    height: 15rem;
+    object-fit: cover;
+  }
+
+  .Img-Stack {
+    height: 15rem;
+  }
+
+  .Img-Stack>img:first-child {
+    z-index: 2;
+    position: absolute;
+    left: 8rem;
+    bottom: 50%;
+  }
+  
+  .Img-Stack>img:last-child {
+    position: absolute;
+    left: 2rem;
+    top: 0;
+  }
+
+  .Booking-Confirmed h1 {
+   line-height: unset;
+   text-align: center;
   }
 }
