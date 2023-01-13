@@ -1,38 +1,257 @@
-.App {
-  text-align: center;
+* {
+  font-family: 'Karla', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Navbar a {
+  text-decoration: none;
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Navbar {
+  display: flex;
+  max-width: 70rem;
+  margin-inline: auto;
+  justify-content: space-between;
+  padding-block: 2rem;
+  align-items: center;
+  gap: 5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2.5rem;
+  font-weight: 600;
+}
+
+.Footer {
+  background-color: #edefee;
+  display: flex;
+  padding-block: 5rem;
+  justify-content: center;
+  gap: 10rem;
+}
+
+
+.Footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.Footer a {
+  text-decoration: none;
+  color: black;
+}
+
+.Footer li {
+  margin-bottom: 10px;
+}
+
+.Footer header {
+  font-weight: 700;
+
+}
+
+.Footer img {
+  width: 8rem;
+  object-fit: contain;
+}
+
+.Header {
+  background-color: #495e57;
+  position: relative;
+  height: 20rem;
+  padding-top: 5rem;
+  margin-bottom: 8rem;
+}
+
+.Header section {
+  width: 100%;
+  max-width: 70rem;
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
+}
+
+.Header>section>h1{
+  font-family: 'Markazi Text', serif;
+  color:#f4ce14;
+  font-size: 4rem;
+  line-height: .2;
+  margin: 0;
+  font-weight: 400;
+}
+
+.Header>section>p{
+  color:white;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.Header>section>h2{
+  color:white;
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 0;
+}
+
+.Header img {
+  width: 22rem;
+  height: 27rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  position: absolute;
+  right: 25%;
+  top:4rem;
+}
+
+.button-yellow {
+  background-color: #f4ce14;
+  color: black !important;
+  border: none;
+  padding-block: .7rem;
+  padding-inline: 1.5rem;
+  border-radius: .75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  width: fit-content;
+  height: fit-content;
+}
+
+.Main {
+  margin-block: 5rem;
+}
+
+.Specials {
+  margin-inline: auto;
+  max-width: 70rem;
+}
+
+.Specials header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Specials header h1 {
+  font-size: 4rem;
+  font-family: 'Markazi Text', serif;
+  font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Card-Container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  grid-row: 1;
+  gap: 3rem;
+}
+
+.Specials-Card {
+  border-radius: .5rem;
+  background-color: #edefee;
+  width: 100%;
+}
+
+.Specials-Card img {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: .5rem .5rem 0 0;
+}
+
+.Card-Body {
+  padding-block: 1.4rem;
+  padding-inline: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+}
+
+.Card-Body div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Card-Body div p {
+  color: #ee9972;
+}
+
+.Card-Body button {
+  display: flex;
+  height: auto;
+  align-items: center;
+  border: none;
+  font-weight: 600;
+  gap: .5rem;
+}
+
+.Card-Body button img {
+  width: 1.5rem;
+  height: auto;
+  object-fit: contain;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .Navbar ul {
+    display: none !important;
   }
-  to {
-    transform: rotate(360deg);
+  .Navbar img {
+    display: block !important;
+  }
+  .Navbar {
+    padding-inline: 2rem;
+    padding-block: 1rem;
+  }
+
+  .Main {
+    margin: 2rem;
+  }
+
+  .Header img {
+    display: none;
+  }
+
+  .Header section {
+    padding-inline: 2rem;
+  }
+
+  .Header {
+    margin: 0px !important;
+  }
+
+  .Specials header {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .Specials header h1 {
+    font-size: 3rem;
+    line-height: 0;
+  }
+
+
+  .Card-Container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Footer {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+    padding-inline: 1rem;
+  }
+
+  .Footer > * {
+    margin-inline: auto;
   }
 }

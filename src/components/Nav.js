@@ -1,9 +1,10 @@
 import React from "react";
 import Logo from "../assets/images/Logo.svg";
+import hamburger from "../assets/images/🦆 icon _hamburger menu.svg";
 
 export default function Nav() {
   return (
-    <nav>
+    <nav className="Navbar">
       <img src={Logo} alt="LittleLemon Logo" />
       <ul>
         <li>
@@ -25,6 +26,7 @@ export default function Nav() {
           <a href="">Login</a>
         </li>
       </ul>
+      <img src={hamburger} style={{ display: "none" }} />
     </nav>
   );
 }

@@ -3,10 +3,10 @@ import Logo_footer from "../assets/images/Logo_footer.png";
 
 export default function Footer() {
   return (
-    <footer>
-      <img src={Logo_footer} alt="Little Lemon Logo" width={100} />
+    <footer className="Footer">
+      <img src={Logo_footer} alt="Little Lemon Logo" />
       <section>
-        <header>Doormat Navigation</header>
+        <header>Navigation</header>
         <ul>
           <li>
             <a href="">Home</a>
