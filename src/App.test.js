@@ -1,8 +1,13 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import BookingForm from "./components/BookingForm";
+import { initializeTimes, updateTimes } from "./App";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test("Check if there are schedule times returned", () => {
+  const dates = initializeTimes;
+  expect(dates).not.toBe([]);
+});
+
+test("Check if scheduletimes are updated dynamically", () => {
+  const dates = updateTimes("", { date: "2023-01-10" });
+  expect(dates).not.toBe([]);
 });
